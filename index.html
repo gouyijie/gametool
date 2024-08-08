@@ -109,6 +109,127 @@
             font-weight: 600;
             border-radius: 20px;
         }
+        .bbq {
+            height: 400px;
+            margin-top: 20px;
+            height: auto;
+            position: relative;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .bbq img {
+            width: 100%;
+            height: auto;
+
+        }
+        .starBox {
+            width: auto;
+            height: auto;
+        }
+        .starBox img {
+            width: auto;
+            height: auto;
+        }
+        .star1 {
+            position: absolute;
+            left: 45%;
+            top: 30px;
+            animation-name: rotate-in-anticlock;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+        }
+        .star2 {
+            position: absolute;
+            left: 20px;
+            top: 35%;
+            animation-name: scale-up-center;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+        }
+        .star3 {
+            position: absolute;
+            right: 20px;
+            top: 60%;
+            animation-name: swirl-in-zoomin;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+        }
+        .bbq_text {
+            position: absolute;
+            text-align: center;
+            width: 300px;
+            height: 400px;
+            /* background: pink; */
+            left: 50px;
+            top: 130px;
+            box-sizing: border-box;
+            padding: 0 20px;
+            font-size: 16px;
+            color: #99cc75;
+            line-height: 32px;
+        }
+        
+        @keyframes rotate-in-anticlock {
+                
+            0% {
+                transform:rotate(45deg);
+                opacity:0;
+            }
+            25% {
+                transform:rotate(0);
+                opacity:1;
+            }
+            50% {
+                transform:rotate(45deg);
+                opacity:0;
+            }
+            75% {
+                transform:rotate(0);
+                opacity:1;
+            }
+            100% {
+                transform:rotate(45deg);
+                opacity:0;
+            }
+        }
+        @keyframes scale-up-center {
+            0% {
+                transform:scale(1);
+            }
+            50% {
+                transform:scale(1.3);
+            }
+            100% {
+                transform:scale(1);
+            }
+        }
+        @keyframes swirl-in-zoomin {
+			
+            0% {
+                transform:rotate(-90deg) scale(.5);
+                opacity:0;
+            }
+            50% {
+                transform:rotate(0) scale(1);
+                opacity:1;
+            }
+            100% {
+                transform:rotate(-90deg) scale(.5);
+                opacity:0;
+            }
+        }
     </style>
 </head>
 
@@ -125,8 +246,18 @@
             </div>
         </div>
     </div>
-    <div class="announcement">
+    <!-- <div class="announcement">
         <div class="announcement_title">代办</div>
+    </div> -->
+    <div class="bbq">
+        <img src="./img/bbbj_new.png" alt="">
+        <div class="starBox star1"><img src="./img/star1.png" alt=""></div><div class="starBox star2"><img src="./img/star2.png" alt=""></div><div class="starBox star3"><img src="./img/star3.png" alt=""></div>
+        <div class="bbq_text">
+            <p>江流宛转绕芳甸，月照花林皆似霰。
+                空里流霜不觉飞，汀上白沙看不见。
+                江天一色无纤尘，皎皎空中孤月轮。
+                江畔何人初见月？江月何年初照人？</p>
+        </div>
     </div>
     <script>
         function goBlock() {
